@@ -5,7 +5,7 @@ Project-10*/
 #include <stdio.h>
 
 void gameRules();
-void gameGuess(int yes, int r, char guess[][], char word[]);
+void gameGuess(int yes, int r, char guess[], char word[]);
 
 int main(){
 
@@ -36,11 +36,11 @@ void gameRules(){
    
 }
 
-void gameGuess(int yes, int r, char guess[][], char word[]){
+void gameGuess(int yes, int r, char guess[], char word[]){
 
       printf("Word guess #%d:", r);
       for(int c = 0; c <= 5; c++){
-      scanf("%c", guess[r][c]);
+      scanf("%c", &guess[r][c]);
       }
       if(guess[r] == word){
          yes = 1;
